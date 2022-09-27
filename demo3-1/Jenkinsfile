@@ -15,7 +15,11 @@ pipeline {
         stage('Test') {
             steps {
                echo "Testing release ${RELEASE}"
-               writeFile file: 'test-results.txt', text: 'passed'               
+               writeFile file: 'test-results.txt', text: '''
+               This some a paragraph
+               inside the test results file.
+               Dont mind me, im just a text.
+               '''
             }
         }
    }
